@@ -1,6 +1,5 @@
 <template>
-  <div>
-
+    <div>
   <tbody>
     <tr>
       <th scope="row">1</th>
@@ -21,17 +20,15 @@
       <td>@twitter</td>
     </tr>
   </tbody>
-
-  </div>
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
+    export default {
+        name: "Player",
 
-}
+    }
 </script>
-
 
 <style scoped>
 

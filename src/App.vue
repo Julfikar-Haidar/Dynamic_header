@@ -1,28 +1,49 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+
+
+        <h2>Helloworld table</h2>
+
+        <table class="table">
+            <Header v-bind:headerContent="header_title"></Header>
+            <Helloworld></Helloworld>
+        </table>
+        <hr>
+        <hr>
+
+        <h2>Player table</h2>
+
+        <table class="table">
+            <Header v-bind:headerContent="player_title"></Header>
+            <player></player>
+        </table>
+
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    import Header from './components/Header'
+    import Player from './components/Player'
+    import Helloworld from './components/HelloWorld'
+
+    export default {
+        name: 'App',
+        components: {
+            // eslint-disable-next-line vue/no-unused-components
+            Header,
+            Player,
+            Helloworld
+        },
+        data() {
+            return {
+                header_title: ['name', 'body', 'image', 'status'],
+                player_title: ['Image', 'Tajal', 'Galib', 'Maruf','Mahfuz','sakib']
+            }
+        }
+    }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
